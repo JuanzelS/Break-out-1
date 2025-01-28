@@ -5,8 +5,8 @@ const ctx = canvas.getContext("2d");
 let ballRadius = 10;
 let x = canvas.width / 2;
 let y = canvas.height - 30;
-let dx = 3; // Slightly faster
-let dy = -3; // Slightly faster
+let dx = 4; // Slightly faster
+let dy = -4; // Slightly faster
 
 // Paddle properties
 const paddleHeight = 10;
