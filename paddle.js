@@ -13,6 +13,4 @@ class Paddle {
   }
 }
 
-export default Paddle; // Ensure the class is exported
-
-
+export default Paddle;  // Export the class
