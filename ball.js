@@ -1,20 +1,24 @@
-class Ball {
+export class Ball {
   constructor(canvas) {
     this.radius = 10;
     this.x = canvas.width / 2;
     this.y = canvas.height - 30;
     this.dx = 2;
     this.dy = -2;
-    this.color = "#0095DD";
+    this.canvas = canvas;
+    this.ctx = canvas.getContext("2d");
   }
 
-  render(ctx) {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = this.color;
-    ctx.fill();
-    ctx.closePath();
+  draw() {
+    this.ctx.beginPath();
+    this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    this.ctx.fillStyle = "#0095DD";
+    this.ctx.fill();
+    this.ctx.closePath();
+  }
+
+  update() {
+    this.x += this.dx;
+    this.y += this.dy;
   }
 }
-
-export default Ball;  // Export the class
