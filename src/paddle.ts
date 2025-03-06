@@ -5,7 +5,7 @@ export class Paddle {
     speed:number
     dx:number
     canvas:HTMLCanvasElement
-    constructor(canvas) {
+    constructor(canvas:HTMLCanvasElement) {
         this.canvas = canvas;
         this.width = 75;
         this.height = 10;
@@ -32,8 +32,8 @@ export class Paddle {
         if (this.x + this.width > this.canvas.width) this.x = this.canvas.width - this.width;
     }
 
-    draw(ctx) {
-        ctx.fillStyle = "white";
+    draw(ctx:CanvasRenderingContext2D) {
+        ctx.fillStyle = "orange";
         ctx.fillRect(this.x, this.canvas.height - this.height - 10, this.width, this.height);
     }
 }

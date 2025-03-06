@@ -7,7 +7,7 @@ export class Game {
     ctx:CanvasRenderingContext2D
     paddle:Paddle
     ball:Ball
-    bricks:Brick[][]
+    bricks:Brick[]
     lives:number
     score:number
     constructor(canvas:HTMLCanvasElement, ctx:CanvasRenderingContext2D) {
@@ -92,7 +92,7 @@ export class Game {
         this.bricks.forEach((brick) => brick.draw(this.ctx));
 
         // Score & Lives
-        this.ctx.fillStyle = "white";
+        this.ctx.fillStyle = "black";
         this.ctx.fillText(`Score: ${this.score}`, 20, 20);
         this.ctx.fillText(`Lives: ${this.lives}`, this.canvas.width - 70, 20);
     }
