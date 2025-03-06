@@ -1,4 +1,10 @@
 export class Paddle {
+    height:number
+    width:number
+    x:number
+    speed:number
+    dx:number
+    canvas:HTMLCanvasElement
     constructor(canvas) {
         this.canvas = canvas;
         this.width = 75;

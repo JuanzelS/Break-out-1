@@ -1,9 +1,16 @@
-import { Paddle } from "./paddle.js";
-import { Ball } from "./ball.js";
-import { Brick } from "./brick.js";
+import { Paddle } from "./paddle";
+import { Ball } from "./ball";
+import { Brick } from "./brick";
 
 export class Game {
-    constructor(canvas, ctx) {
+    canvas:HTMLCanvasElement
+    ctx:CanvasRenderingContext2D
+    paddle:Paddle
+    ball:Ball
+    bricks:Brick[][]
+    lives:number
+    score:number
+    constructor(canvas:HTMLCanvasElement, ctx:CanvasRenderingContext2D) {
         this.canvas = canvas;
         this.ctx = ctx;
         this.paddle = new Paddle(canvas);

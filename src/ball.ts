@@ -1,5 +1,15 @@
+import { Brick } from "./brick";
+import { Paddle } from "./paddle";
+
 export class Ball {
-    constructor(canvas, paddle) {
+    canvas:HTMLCanvasElement
+    paddle:Paddle
+    radius:number
+    x:number
+    y:number
+    dx:number
+    dy:number
+    constructor(canvas:HTMLCanvasElement, paddle:Paddle) {
         this.canvas = canvas;
         this.paddle = paddle;
         this.radius = 5;
@@ -38,7 +48,7 @@ export class Ball {
         this.dy = -2;
     }
 
-    hitBrick(brick) {
+    hitBrick(brick:Brick) {
         if (
             this.x > brick.x &&
             this.x < brick.x + brick.width &&
@@ -51,7 +61,7 @@ export class Ball {
         return false;
     }
 
-    draw(ctx) {
+    draw(ctx:CanvasRenderingContext2D) {
         ctx.fillStyle = "white";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
