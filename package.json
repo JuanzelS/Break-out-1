@@ -1,8 +1,20 @@
 {
-  ...
+  "name": "class-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
   "scripts": {
     "develop": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
-  ...
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    
+  }
 }
